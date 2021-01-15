@@ -1,0 +1,168 @@
+/* GLOBAL SETTINGS */
+
+html, body {
+    height: 100vh;
+} 
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+/* HEADER */
+
+.header-container {
+    display: flex;
+    flex: 2 1 45%;
+    flex-direction: column;
+    background-color: black;
+    margin: 1.5rem;
+}
+    .navbar {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(57, 58, 68);
+        margin: 1.5rem 1.5rem 0.75rem 1.5rem;
+        padding: 1rem;
+    }
+        .logo {
+            flex: 1 1 auto;
+            background-color: rgb(221, 78, 78);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+        .menu {
+            flex: 2 1 auto;
+            background-color: rgb(221, 78, 78);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+        .social {
+            flex: 1 1 auto;
+            background-color: rgb(221, 78, 78);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+    .header-section {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(243, 138, 52);
+        margin: 0.75rem 1.5rem 1.5rem 1.5rem;
+        padding: 1rem;
+    }
+        .header-content {
+            flex: 1 1 auto;
+            background-color: rgb(245, 190, 71);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+
+/* MAIN SECTION */
+
+.section-container {
+    display: flex;
+    flex: 2 1 45%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+}
+    .articles-container {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 2 1 auto;
+        align-items: center;
+        background-color:rgb(57, 58, 68);
+        margin: 1.5rem 0.75rem 1.5rem  1.5rem;
+        padding: 1rem;
+    }
+        .main-article {
+            flex: 1 1 30%;
+            background-color: rgb(46, 73, 150);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+        .last-article {
+            flex: 1 1 100%;
+            background-color: rgb(108, 173, 202);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+    .aside-container {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: rgb(165, 45, 71);
+        margin: 1.5rem 1.5rem 1.5rem 0.75rem;
+        padding: 1rem;
+    }
+        .aside-article {
+            background-color: rgb(255, 213, 124);
+            margin: 0.5rem;
+            padding: 1.5rem;
+        }
+
+/* FOOTER */
+
+.footer-container {
+    display: flex;
+    flex: 2 1 10%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding: 1rem;
+}
+    .footer {
+        background-color: rgb(201, 157, 76);
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 800px){
+    .section-container {
+        display: flex;
+        flex: 2 1 45%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(250, 206, 62);
+        margin: 0 1.5rem 1.5rem 1.5rem;
+    }
+        .articles-container {
+            margin: 1.5rem 1.5rem 0.75rem 1.5rem;
+        }
+        .aside-container {
+            margin: 0.75rem 1.5rem 1.5rem 1.5rem;
+        }
+}
+
+@media only screen and (max-width: 400px){
+    .section-container {
+        display: flex;
+        flex: 2 1 45%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(250, 206, 62);
+        margin: 0 1.5rem 1.5rem 1.5rem;
+    }
+        .articles-container {
+            margin: 1.5rem 1.5rem 0.75rem 1.5rem;
+        }
+        .aside-container {
+            margin: 0.75rem 1.5rem 1.5rem 1.5rem;
+        }
+}
