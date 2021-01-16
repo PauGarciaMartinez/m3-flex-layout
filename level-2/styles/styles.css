@@ -6,6 +6,7 @@ html, body {
 
 body {
     margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
 }       
 
 .wrapper {
@@ -57,34 +58,57 @@ body {
                 font-size: 1.3em;
                 color: grey;
                 text-decoration: none;
-                padding-right: 4em;
+                padding-right: 2em;
             }
             .menu-link:hover {
                 color: rgb(36, 36, 36);
             }
+            i {
+                margin: 1rem;
+            }
         .social {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             flex: 1 1 20%;
-            background-color: rgb(221, 78, 78);
+            background-color: rgba(221, 78, 78, 0);
             margin: 0.5rem;
             padding: 1.5rem;
         }
+            .social i {
+                font-size: 2em;
+                color: grey;
+            }
+            .social i:hover {
+                color: rgb(36, 36, 36);
+            }
             
     .header-section {
         display: flex;
         flex: 1 1 auto;
         flex-direction: row;
         align-items: center;
-        background-color: rgb(243, 138, 52);
+        background-color: rgba(200, 200, 200, 0.274);
         margin: 0.75rem 1.5rem 1.5rem 1.5rem;
         padding: 1rem;
     }
         .header-content {
+            display: flex;
+            justify-content: center;
+            align-content: center;
             flex: 1 1 auto;
-            background-color: rgb(245, 190, 71);
+            background-color: rgba(245, 190, 71, 0);
             margin: 0.5rem;
             padding: 1.5rem;
         }
+            h1 {
+                font-size: 3em;
+                color: rgba(219, 137, 144, 0.9);
+            }
+                .quotes {
+                    font-size: 1.5em;
+                    font-weight: 800;
+                }
 
 /* MAIN SECTION */
 
@@ -93,44 +117,83 @@ body {
     flex: 2 1 45%;
     flex-direction: row;
     justify-content: space-between;
-    background-color: black;
+    background-color: rgba(173, 173, 173, 0.274);
     margin: 0 1.5rem 1.5rem 1.5rem;
 }
     .articles-container {
         display: flex;
         flex-flow: row wrap;
-        flex: 2 1 auto;
+        flex: 2 1 80%;
         align-items: center;
-        background-color:rgb(57, 58, 68);
-        margin: 1.5rem 0.75rem 1.5rem  1.5rem;
+        background-color: rgb(248, 248, 248);
+        margin: 1.5rem 0.75rem 1.5rem 1.5rem;
         padding: 1rem;
     }
         .main-article {
-            flex: 1 1 30%;
-            background-color: rgb(46, 73, 150);
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 40%;
+            background-color: rgba(219, 137, 144, 0.9);
             margin: 0.5rem;
-            padding: 1.5rem;
+
         }
         .last-article {
+            display: flex;
+            flex-direction: column;
             flex: 1 1 100%;
-            background-color: rgb(108, 173, 202);
+            background-color:rgba(219, 137, 144, 0.9);
             margin: 0.5rem;
-            padding: 1.5rem;
         }
+            .date {
+                position: relative;
+                bottom: 15px;
+                font-weight: 900;
+                color: rgba(36, 36, 36, 0.8);
+                margin-bottom: -1.6rem;
+            }
+            .title-content {
+                font-size: 1.4em;
+                font-weight: 800;
+                color: white;
+                margin-left: 0.5rem;
+                margin-bottom: -1.6rem;
+            }
+            .text {
+                background-color: rgb(248, 248, 248);
+                margin-bottom: 0;
+                margin-top: 1.2rem;
+                padding: 0.8rem;
+            }
+            .more {
+                color: grey;
+                background-color: rgb(248, 248, 248);
+                text-decoration: none;
+                padding: 0.5rem;
+            }
+            .more:hover {
+                color: rgb(36, 36, 36);
+            }
     .aside-container {
         display: flex;
-        flex: 1 1 auto;
+        flex: 1 1 20%;
         flex-direction: column;
         justify-content: flex-start;
-        background-color: rgb(165, 45, 71);
+        background-color: rgb(248, 248, 248);
         margin: 1.5rem 1.5rem 1.5rem 0.75rem;
         padding: 1rem;
     }
         .aside-article {
-            background-color: rgb(255, 213, 124);
+            background-color: rgba(255, 213, 124, 0);
             margin: 0.5rem;
-            padding: 1.5rem;
+            padding-bottom: -5rem;
         }
+            .aside-article .title-content {
+                font-size: 1.4em;
+                font-weight: 800;
+                color: rgba(219, 137, 144, 0.9);
+                margin-left: 0.5rem;
+                margin-bottom: -1.4rem;
+            }
 
 /* FOOTER */
 
@@ -139,25 +202,38 @@ body {
     flex: 2 1 10%;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(200, 200, 200, 0.274);
     margin: 0 1.5rem 1.5rem 1.5rem;
     padding: 1rem;
 }
     .footer {
-        background-color: rgb(201, 157, 76);
+        background-color: rgba(219, 137, 144, 0.9);
         margin: 0.5rem;
         padding: 1.5rem;
     }
+        .footer p {
+            text-align: end;
+            color: white;
+            font-weight: 800;
+        }
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1250px){
+    .navbar {
+        flex-direction: column;
+    }
+    .menu-link {
+        padding-right: 0.8rem;
+    }
+    .social {
+        flex-direction: row;
+    }
     .section-container {
         display: flex;
         flex: 2 1 45%;
         flex-direction: column;
         justify-content: space-between;
-        background-color: rgb(250, 206, 62);
         margin: 0 1.5rem 1.5rem 1.5rem;
     }
         .articles-container {
@@ -168,13 +244,24 @@ body {
         }
 }
 
+@media only screen and (max-width: 700px){
+    .articles-container {
+        flex-flow: column;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .menu {
+        flex-wrap: wrap;
+    }
+}
+
 @media only screen and (max-width: 400px){
     .section-container {
         display: flex;
         flex: 2 1 45%;
         flex-direction: column;
         justify-content: space-between;
-        background-color: rgb(250, 206, 62);
         margin: 0 1.5rem 1.5rem 1.5rem;
     }
         .articles-container {
